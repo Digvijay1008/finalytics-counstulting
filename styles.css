@@ -1,0 +1,574 @@
+/* Custom Theme Variables */
+:root {
+    --primary-blue: #0B2A4A;
+    /* Finalytics Deep Blue */
+    --secondary-blue: #1E6BD6;
+    /* Highlights / Buttons */
+    --bg-light: #F6F9FC;
+    /* Light Backround */
+    --text-dark: #1F2933;
+    /* Main Text */
+    --text-muted: #6B7280;
+    /* Muted Text */
+    --border-color: #E5E7EB;
+    /* Dividers */
+    --white: #FFFFFF;
+
+    --font-main: 'Inter', sans-serif;
+
+    --shadow-soft: 0 4px 20px -5px rgba(11, 42, 74, 0.08);
+    /* Tuned to blue */
+    --shadow-hover: 0 15px 30px -5px rgba(11, 42, 74, 0.15);
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-blue);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+p {
+    color: var(--text-muted);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- Utilities --- */
+.bg-primary-blue {
+    background-color: var(--primary-blue) !important;
+}
+
+.bg-light-blue {
+    background-color: var(--bg-light) !important;
+}
+
+.text-primary-blue {
+    color: var(--primary-blue) !important;
+}
+
+.text-secondary-blue {
+    color: var(--secondary-blue) !important;
+}
+
+/* --- Custom Scrollbar (Premium Feel) --- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-blue);
+}
+
+/* --- Navbar --- */
+#mainNav {
+    background: rgba(255, 255, 255, 0.98);
+    /* Almost solid white */
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow always on */
+}
+
+.navbar-brand img {
+    height: 45px;
+    width: auto;
+    /* This makes the white background of the JPG logo "disappear" into the navbar */
+    mix-blend-mode: multiply;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-dark) !important;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--secondary-blue) !important;
+    background-color: transparent;
+    /* Clean hover */
+}
+
+/* --- Buttons --- */
+.btn {
+    border-radius: 6px;
+    /* Slightly rounded, professional */
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom {
+    background-color: var(--secondary-blue);
+    color: white;
+    border: 1px solid var(--secondary-blue);
+}
+
+.btn-primary-custom:hover {
+    background-color: #1656b0;
+    /* darker shade of secondary blue */
+    border-color: #1656b0;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-secondary-custom {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-secondary-custom:hover {
+    background-color: white;
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, #0B2A4A 0%, #061A2F 100%);
+    color: white;
+    padding: 140px 0 100px 0;
+    /* Top padding accom accounts for navbar */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section p.lead {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Hero Image wrapper */
+.hero-img-container {
+    padding-left: 2rem;
+}
+
+.hero-img-container img {
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Inner Page Header (New) --- */
+.inner-page-header {
+    background: linear-gradient(135deg, #0B2A4A 0%, #061A2F 100%);
+    color: white;
+    padding: 120px 0 60px 0;
+    margin-bottom: 0;
+}
+
+.inner-page-header h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.inner-page-header .lead {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+/* --- "What Makes Us Different" (Icon Row) --- */
+.feature-icon-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.feature-icon-card:hover {
+    transform: translateY(-6px);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--secondary-blue);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.feature-icon-card h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-icon-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* --- Who We Are (Split) --- */
+.split-content-img img {
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+}
+
+.checklist li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.75rem;
+    position: relative;
+    color: var(--text-dark);
+}
+
+.checklist li::before {
+    content: "\f00c";
+    /* check icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--secondary-blue);
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+/* --- Process Section (Dark) --- */
+.process-section {
+    background-color: var(--primary-blue);
+    color: white;
+    position: relative;
+}
+
+.process-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.process-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.process-card h4 {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.process-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+/* --- Services Grid --- */
+.service-card-grid {
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.service-card-grid:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+    border-color: transparent;
+}
+
+.service-icon-box {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-light);
+    color: var(--primary-blue);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    transition: background 0.3s;
+}
+
+.service-card-grid:hover .service-icon-box {
+    background: var(--secondary-blue);
+    color: white;
+}
+
+.service-card-grid h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.service-list-mini {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list-mini li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    padding-left: 1rem;
+    position: relative;
+}
+
+.service-list-mini li::before {
+    content: "•";
+    color: var(--secondary-blue);
+    position: absolute;
+    left: 0;
+}
+
+/* --- Why Finalytics --- */
+.trust-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.trust-item i {
+    color: var(--secondary-blue);
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.trust-item span {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* --- CTA Section --- */
+.cta-banner {
+    background: var(--primary-blue);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+    border-radius: 12px;
+}
+
+.cta-banner h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Footer --- */
+footer {
+    background: #061A2F;
+    /* Even darker than primary */
+    color: #9CA3AF;
+    padding: 4rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+footer h5 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+footer a {
+    color: #9CA3AF;
+    transition: color 0.3s;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Spacing Helpers */
+.section-padding {
+    padding: 5rem 0;
+}
+
+.mb-6 {
+    margin-bottom: 4rem;
+}
+
+.gy-5 {
+    --bs-gutter-y: 3rem;
+}
+
+/* --- Mobile Optimization --- */
+@media (max-width: 991px) {
+
+    /* Adjust Hero */
+    .hero-section {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.25rem;
+        /* Smaller heading on mobile */
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 2rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        /* Full width buttons on mobile */
+    }
+
+    .hero-img-container {
+        margin-top: 3rem;
+        padding-left: 0;
+    }
+
+    /* Adjust Navbar for Mobile */
+    #navbarNav {
+        background: white;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Global Spacing */
+    .section-padding {
+        padding: 3.5rem 0;
+    }
+
+    /* Reduce padding */
+    .mb-6 {
+        margin-bottom: 2.5rem;
+    }
+
+    /* Inner Pages */
+    .inner-page-header {
+        padding: 100px 0 40px 0;
+    }
+
+    .inner-page-header h1 {
+        font-size: 2rem;
+    }
+
+    /* Split sections to stack properly */
+    .col-lg-6 {
+        margin-bottom: 2rem;
+    }
+}
+
+/* --- Visual Enhancements: Edge Fades --- */
+.hero-section,
+.process-section {
+    /* Adds a subtle 'vignette' fade to the edges to focus attention on center */
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.4);
+}
+
+/* Scroll Fade specific for mobile tables/overflow if needed, 
+   but generally applied to container sides via body if requested. 
+   Here we implement 'Page Edge' smoothness. */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    z-index: 1000;
+    pointer-events: none;
+    display: none;
+    /* Hidden on desktop by default unless specific request */
+}
+
+/* On very wide screens, soften the hard edges if full width */
+@media (min-width: 1400px) {
+    .hero-section::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        background: linear-gradient(to right, rgba(11, 42, 74, 1), transparent);
+        pointer-events: none;
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        background: linear-gradient(to left, rgba(11, 42, 74, 1), transparent);
+        pointer-events: none;
+    }
+}
+
+/* --- Contact Form --- */
+.contact-form-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-color);
+}
+
+.form-control {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-light);
+}
+
+.form-control:focus {
+    border-color: var(--secondary-blue);
+    box-shadow: 0 0 0 3px rgba(30, 107, 214, 0.1);
+    background-color: white;
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
